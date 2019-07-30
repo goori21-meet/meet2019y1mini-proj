@@ -71,7 +71,7 @@ LEFT_EDGE = -400
 
 def up():
     snake.direction="Up" #Change direction to up
-    move_snake() #Update the snake drawing 
+     #Update the snake drawing 
     print("You pressed the up key!")
 
 #2. Make functions down(), left(), and right() that change snake.direction
@@ -218,13 +218,20 @@ def move_snake():
         food_pos.pop(food_index) #Remove eaten food position
         food_stamps.pop(food_index) #Remove eaten food stamp
         print("You have eaten the food!")
-    
+    else:
+        remove_tail()
 
+    
+    if snake.pos() in pos_list[:-1]:
+        print("you hit yourself")
+        quit()
+        
+        
 
     #remove the last piece of the snake (Hint Functions are FUN!)
-    remove_tail()
-    if len(food_stamps) < 1 :
-                make_food()
+    
+    if len(food_stamps) < 1:
+        make_food()
 
     turtle.ontimer(move_snake,TIME_STEP)
     
