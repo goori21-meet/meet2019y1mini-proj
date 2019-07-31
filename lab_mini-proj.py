@@ -1,7 +1,7 @@
 import turtle
 import random #We'll need this later in the lab
 screen=turtle.Screen()
-screen.bgpic("zach-4.gif")
+screen.bgpic("benandt.gif")
 
 turtle.tracer(1,0) #This helps the turtle move more smoothly
 
@@ -23,8 +23,8 @@ food_stamps = []
 
 #Set up positions (x,y) of boxes that make up the snake
 snake = turtle.clone()
-turtle.register_shape("zach.gif")
-snake.shape("zach.gif")
+turtle.register_shape("ben.gif")
+snake.shape("ben.gif")
 
 #Hide the turtle object (it's an arrow - we don't need to see it)
 turtle.hideturtle()
@@ -112,13 +112,13 @@ turtle.onkeypress(left, "Left")
 
     
 turtle.listen()
-turtle.register_shape("trash.gif") #Add trash picture
+turtle.register_shape("index.gif") #Add trash picture
                       # Make sure you have downloaded this shape 
                       # from the Google Drive folder and saved it
                       # in the same folder as this Python script
 
 food = turtle.clone()
-food.shape("trash.gif") 
+food.shape("index.gif") 
 
 #Locations of food
 food_pos = []
