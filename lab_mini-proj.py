@@ -1,5 +1,7 @@
 import turtle
 import random #We'll need this later in the lab
+screen=turtle.Screen()
+screen.bgpic("zach-4.gif")
 
 turtle.tracer(1,0) #This helps the turtle move more smoothly
 
@@ -21,7 +23,8 @@ food_stamps = []
 
 #Set up positions (x,y) of boxes that make up the snake
 snake = turtle.clone()
-snake.shape("square")
+turtle.register_shape("zach.gif")
+snake.shape("zach.gif")
 
 #Hide the turtle object (it's an arrow - we don't need to see it)
 turtle.hideturtle()
